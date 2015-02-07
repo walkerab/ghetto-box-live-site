@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GhettoBox</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="http://powerfulwizard.net/ghetto-box-live-sitehttp://powerfulwizard.net/ghetto-box-live-site/index-old/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/dist/ghetto-box.css">
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/css/syntax.css">
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/css/style.css">
+
+</head>
+
+	<body class="textured cs-0 fixed-nav-wrapper">
+		<div class="cs-2 tiles tiles-justify fixed-nav">
+			<div class="tile tile-baseline pad-h-sm">
+				<h1 class="fs-xl">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">GhettoBox</a>
+				</h1>
+			</div>
+			<ul class="tile tile-baseline tiles">
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">Home</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/documentation/">Documentation</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/examples/">Examples</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">GitHub</a>
+				</li>
+			</ul>
+		</div>
+		<div class="cs-1 tiles">
+			<img class="tile tile-middle w-1-2" src="http://powerfulwizard.net/ghetto-box-live-site/images/logo-text.svg">
+			<img class="tile tile-middle w-1-2 boomboomboom-animation" src="http://powerfulwizard.net/ghetto-box-live-site/images/logo-image.svg">
+		</div>
+		<div class="cs-2 pad-h-sm pad-v-xs">
+			Somethin somethin somethin, yo
+		</div>
+		<div class="tiles">
+			<div class="md-tile md-w-1-5">
+				<ul id="sidebar" class="js-sub-nav angle-bottom-right pad-nil table md-stack"></ul>
+			</div>
+			<div class="md-tile md-w-4-5 pad-sm">
+				<div class="readable content center">
+					<blockquote>
+  <p>A methodology for creating HTML and CSS</p>
+</blockquote>
+
+<p>This library is built on the premise that the majority of page layouts can be acheived using a combination of a handful of CSS classes.</p>
+
+<p>Bear with me here. Even if you are already familiar with OOCSS, I think you can take s</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Unless you are new to web development or you’ve been living under a rock for the past few years, you’ve probably encountered a concept known as OOCSS. While many (including myself) preach the underlying concepts, it is still a tough sell to other front-end developers.</p>
+
+<p>Why don’t they understand the benefit of this approach? It’s as clear as mud!</p>
+
+<p>A lot of people just don’t “get it” and I don’t blame them. When I first read about OOCSS, I thought people were nuts. It seemed completely absurd to litter my HTML with extraneous classes. Not only that, on top of <em>classitis</em>, OOCSS promotes <em>divitis</em>.</p>
+
+<p>One of my goals here is to present concrete examples of how OOCSS can make your code indeed <strong>more</strong> beautiful and <strong>more organized</strong>.</p>
+
+<p>For one there is a lot of fragmented opinions out there about what exactly it is. Second of all, </p>
+
+<p>What exactly is it?</p>
+
+<h3 id="structure">Structure</h3>
+
+<p>Structure includes things like </p>
+
+<h3 id="skin">Skin</h3>
+
+<h3 id="putting-it-in-action">Putting it in Action</h3>
+
+<p>To demonstrate the concept, I am going to use a CSS framework, Bootstrap. I’m using it because it will be familiar to most of you and not because it is a requirement for OOCSS or because it is “the best” way to do OOCSS. It is just a means to an end.</p>
+
+<p>We are going to use Bootstrap for our <strong>structure only</strong>.</p>
+
+<p>Imagine we are given a design like so:</p>
+
+<p>![]</p>
+
+<p>Let’s create our structure</p>
+
+<p><code>html
+&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-sm-8"&gt;
+		&lt;/div&gt;
+		&lt;div class="col-sm-4"&gt;
+		&lt;/div&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></p>
+
+<p><em>benefit</em> I have created the entire page layout without touching a single line of CSS. Now that’s efficient.</p>
+
+<p>Now it’s time to put a “skin” on the structure. To accomplish this, I am going to introduce a new concept, color schemes. A color scheme (for the sake of argument) consists of at least a background color and a foreground color. It can also include things like text-shadow or define anchor colors but for now we’ll just stick to the two things.</p>
+
+<p>Now you may be thinking, “I could have just done that using mixins. This is stupid.”. Now ask yourself, would that have really been easier? Would that really be less work?</p>
+
+<p>All you’ve really managed to do is move the problem. Not only that, you have made your CSS file larger and made your code harder to read. How is it harder to read?</p>
+
+<p>Good code reveals its intent. Compare … to … ?</p>
+
+<p>I don’t know about you, but I’d prefer to not have to jump between my HTML and CSS to see what’s going on.</p>
+
+<h2 id="benefits">Benefits</h2>
+
+<ul>
+  <li>Systematic</li>
+  <li>Reusable CSS</li>
+  <li>Can sketch out an entire site without creating any CSS</li>
+  <li>Beginner Friendly</li>
+  <li>Don’t have to think up names for things</li>
+  <li>Code reveals its intent</li>
+  <li>Design in the template</li>
+</ul>
+
+<h2 id="goals">Goals</h2>
+
+<ul>
+  <li>Use as few concepts as possible.</li>
+  <li>Provide a sane and <em>reusable</em> set of classes</li>
+  <li>Provide a systematic approach to page layout</li>
+  <li>Provide a flexbox-like functionality until it attains wider support</li>
+  <li>Stay out of the way by providing only minimal styling</li>
+  <li>Separate skin from structure</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="two-column-layout">Two Column Layout</h3>
+
+<p><code>html
+&lt;div class="tile w-1-2 pad-md"&gt;
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	&lt;/p&gt;
+&lt;/div
+&gt;&lt;div class="tile w-1-2 pad-md"&gt;
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	&lt;/p&gt;
+&lt;/div&gt;
+</code></p>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://powerfulwizard.net/ghetto-box-live-site/js/generate-sub-nav.js"></script>
+		<script type="text/javascript" src="http://powerfulwizard.net/ghetto-box-live-site/js/sticky-sidebar.js"></script>
+	</body>
+</html>

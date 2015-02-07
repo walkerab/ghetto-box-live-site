@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Element Queries Example</title>
+	<link rel="stylesheet" href="../../dist/ghetto-box.css">
+</head>
+<body class="fs-md">
+	<div id="template" class="ghetto-wrapper pad-h-md">
+		<div class="tiles tiles-justify">
+			<div class="tile w-fill md-w-3-4">
+				<div class="center max-w-20 spaced-out-v-md">
+					<h1>{{title}}</h1>
+					{{{body}}}
+				</div>
+			</div>
+			<div class="tile w-8 spaced-out-v-md">
+				<ul>
+					{{#each related_articles_links}}
+					<li>
+						<a href="{{href}}">{{title}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../../bower_components/handlebars/handlebars.min.js"></script>
+	<script>
+		var context = {
+			title: 'A Blog Post',
+			body: "\
+				<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p>\
+				<p>Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz.</p>\
+				<p>Quick, Baz, get my woven flax jodhpurs! &quot;Now fax quiz Jack! &quot; my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls.</p>\
+				<p>Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog.</p>\
+				<p>Watch &quot;Jeopardy! &quot;, Alex Trebek's fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show.</p>\
+				<p>Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow. Foxy parsons quiz and cajole the lovably dim wiki-girl. Have a pick: twenty six letters - no forcing a jumbled quiz! Crazy Fredericka bought many very exquisite opal jewels. Sixty zippers were quickly picked from the woven jute bag. A quick</p>\
+			",
+			related_articles_links: [
+				{
+					title: '3 Reasons Why You Absolutely Should Eat Your Veggies',
+					href: '#'
+				},
+				{
+					title: 'How Do They Get the Caramel in the Caramilk Bar?',
+					href: '#'
+				},
+				{
+					title: 'Click Bait: Is it Real? You Won\'t Believe What These 10 Celebrities Had to Say!',
+					href: '#'
+				}
+			]
+		};
+		var el_template = document.getElementById('template');
+		var template = Handlebars.compile(el_template.innerHTML);
+		el_template.innerHTML = template(context);
+	</script>
+</body>
+</html>

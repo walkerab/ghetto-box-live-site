@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GhettoBox Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="http://powerfulwizard.net/ghetto-box-live-sitehttp://powerfulwizard.net/ghetto-box-live-site/documentation/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/dist/ghetto-box.css">
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/css/syntax.css">
+    <link rel="stylesheet" href="http://powerfulwizard.net/ghetto-box-live-site/css/style.css">
+
+</head>
+
+	<body class="textured cs-0 fixed-nav-wrapper">
+		<div class="cs-2 tiles tiles-justify fixed-nav">
+			<div class="tile tile-baseline pad-h-sm">
+				<h1 class="fs-xl">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">GhettoBox</a>
+				</h1>
+			</div>
+			<ul class="tile tile-baseline tiles">
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">Home</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/documentation/">Documentation</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/examples/">Examples</a>
+				</li>
+				<li class="tile tile-baseline pad-h-sm">
+					<a href="http://powerfulwizard.net/ghetto-box-live-site/">GitHub</a>
+				</li>
+			</ul>
+		</div>
+		<div class="cs-1 tiles">
+			<img class="tile tile-middle w-1-2" src="http://powerfulwizard.net/ghetto-box-live-site/images/logo-text.svg">
+			<img class="tile tile-middle w-1-2 boomboomboom-animation" src="http://powerfulwizard.net/ghetto-box-live-site/images/logo-image.svg">
+		</div>
+		<div class="cs-2 pad-h-sm pad-v-xs">
+			Somethin somethin somethin, yo
+		</div>
+		<div class="tiles">
+			<div class="md-tile md-w-1-5">
+				<ul id="sidebar" class="js-sub-nav angle-bottom-right pad-nil table md-stack"></ul>
+			</div>
+			<div class="md-tile md-w-4-5 pad-sm">
+				<div class="readable content center">
+					<h2 id="padding">Padding</h2>
+
+<p>GhettoBox supports a simple mechanism for maintaining consistent spacing in and around your elements: <strong>padding</strong>.</p>
+
+<p>This isn’t exactly a major breakthrough.</p>
+
+<p>The difference here is that other CSS layout systems typically will apply padding without you asking (e.g. for gutters) while GhettoBox applies padding only when you tell it to do so.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Padding is specified using the <code>.pad-{size}</code> and <code>.pad-{side}-{size}</code> classes.</p>
+
+<div class="sm-table">
+
+<div class="sm-table-cell sm-w-1-3 cs-2 pad-md">
+
+    <p>The sides are:</p>
+
+    <ul>
+      <li>top</li>
+      <li>bottom</li>
+      <li>left</li>
+      <li>right</li>
+    </ul>
+
+  </div>
+
+<div class="sm-table-cell sm-w-2-3 cs-1 pad-md">
+
+    <p>The sizes are:</p>
+
+    <dl>
+      <dt><code>nil</code></dt>
+      <dd>no padding <small class="fs-sm">(useful for removing padding at <a href="#responsive">different screen sizes</a>)</small></dd>
+      <dt><code>xs</code></dt>
+      <dd>equivalent to <code>line-height ÷ 4</code></dd>
+      <dt><code>sm</code></dt>
+      <dd>equivalent to <code>line-height ÷ 2</code></dd>
+      <dt><code>md</code></dt>
+      <dd>equivalent to <code>line-height</code></dd>
+      <dt><code>lg</code></dt>
+      <dd>equivalent to <code>line-height x 2</code></dd>
+      <dt><code>xl</code></dt>
+      <dd>equivalent to <code>line-height x 4</code></dd>
+    </dl>
+
+  </div>
+
+</div>
+
+<div class="cs-2 pad-md">
+
+  <p>The padding sizes are by default based on line-height. This helps maintain a vertical rhythm. Also since line-height is easily visualized, choosing the appropriate padding becomes straightforward.</p>
+
+</div>
+
+<p>By itself, padding isn’t terribly exciting. However, it really shines when combined with other components.</p>
+
+<h2 id="tiling">Tiling</h2>
+
+<p>The core feature of GhettoBox is the tiling system. It is what controls left-to-right layout.</p>
+
+<div class="cs-1 pad-md">
+
+  <p>In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a <strong>tile</strong>.</p>
+
+</div>
+
+<p>Tiling requires the use of at least two CSS classes:</p>
+
+<dl>
+  <dt><code>.tile</code></dt>
+  <dd>Identifies each tile element</dd>
+  <dt><code>.tiles</code></dt>
+  <dd>The container for the tile elements</dd>
+</dl>
+
+<h3 id="example">Example</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;ul</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            These
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            Are
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            Links
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="cs-1">
+	<ul class="tiles pad-sm">
+		<li class="tile">
+			<a href="#">
+				These
+			</a>
+		</li>
+		<li class="tile">
+			<a href="#">
+				Are
+			</a>
+		</li>
+		<li class="tile">
+			<a href="#">
+				Links
+			</a>
+		</li>
+	</ul>
+</div>
+
+<p>We made these list items inline by adding the <code>.tile</code> class. The surrounding <code>.tile</code> class will control the space between each <code>.tile</code> (or lack thereof).</p>
+
+<p>As is, this is not very useful. We need to have some space between our links!</p>
+
+<p>Let’s throw in some padding.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;ul</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile pad-xs</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            These
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile pad-xs</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            Are
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;li&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;a</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile pad-xs</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+            Links
+        <span style="color:#070;font-weight:bold">&lt;/a&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/li&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="cs-1">
+	<ul class="tiles pad-xs">
+		<li class="tile pad-xs">
+			<a href="#">
+				These
+			</a>
+		</li>
+		<li class="tile pad-xs">
+			<a href="#">
+				Are
+			</a>
+		</li>
+		<li class="tile pad-xs">
+			<a href="#">
+				Links
+			</a>
+		</li>
+	</ul>
+</div>
+
+<h2 id="widths">Widths</h2>
+
+<p>We can control the width of an element using one of the width classes. They look like this: <code>.w-{numerator}-{denominator}</code>.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w-1-3</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    The width is a third of the width of the containing space.
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="w-1-3 cs-1">
+	The width is a third of the width of the containing space.
+</div>
+
+<p>By default there are … These can be customized in <code>variables.styl</code>.</p>
+
+<div class="cs-2 pad-sm">
+
+  <p><strong>NOTE:</strong> In addition to the <code>.w-*-*</code> classes there is also a special class, <code>.w-fill</code>. It makes an element 100% the width of its parent element.</p>
+
+</div>
+
+<p>Using widths we can, like in a grid system, create columns. To do this we make an element act as a tile and then give it a width.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile w-1-2</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        First Column
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile w-1-2</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        Second Column
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="tiles">
+	<div class="tile w-1-2 cs-2">
+		First Column
+	</div>
+	<div class="tile w-1-2 cs-1">
+		Second Column
+	</div>
+</div>
+
+<p>Unlike other grid systems, these “columns” do not include gutters by default. If we want to have gutters, it’s only a matter of adding padding to the elements.</p>
+
+<div class="tiles">
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+</div>
+
+<h2 id="alignment">Alignment</h2>
+
+<p>Tiles can be aligned both vertically and/or horizontally.</p>
+
+<p>For <strong>vertical alignment</strong> we add one of these <code>.tile-*</code> variants to our tile elements:</p>
+
+<dl>
+  <dt><code>.tile-top</code></dt>
+  <dd>Align the top of this tile with the top of the tallest tile on the same line (the default behaviour)</dd>
+  <dt><code>.tile-middle</code></dt>
+  <dd>Align the middle of this tile with the middle of the tallest tile on the same line</dd>
+  <dt><code>.tile-bottom</code></dt>
+  <dd>Align the bottom of this tile with the bottom of the tallest tile on the same line</dd>
+</dl>
+
+<p>While for <strong>horizontal alignment</strong> we add one of the <code>.tiles-*</code> variants to the surrounding <code>.tiles</code> element:</p>
+
+<dl>
+  <dt><code>.tiles-left</code></dt>
+  <dd>Place tiles on the left side (the default behaviour)</dd>
+  <dt><code>.tiles-center</code></dt>
+  <dd>Place tiles in the center</dd>
+  <dt><code>.tiles-right</code></dt>
+  <dd>Place tiles on the right side</dd>
+  <dt><code>.tiles-justify</code></dt>
+  <dd>Distribute space between tiles so that, when possible, they meet the left and right edge of each line (Thank CrocoDillon for his work on <a href="http://justifygrid.com/">Justify Grid</a>)</dd>
+</dl>
+
+<h3 id="text-alignment">Text Alignment</h3>
+
+<h3 id="example-vertically-align">Example: Vertically Align</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile tile-middle w-1-2</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        <span style="color:#070;font-weight:bold">&lt;img</span>
+            <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">../examples/images/spiral.svg</span><span style="color:#710">&quot;</span></span>
+            <span style="color:#b48">alt</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">swirly whirly</span><span style="color:#710">&quot;</span></span>
+            <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w-fill</span><span style="color:#710">&quot;</span></span>
+        <span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile tile-middle w-1-2 text-center</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        TRIPPY<span style="color:#070;font-weight:bold">&lt;br&gt;</span>
+        JUNK
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="tiles">
+	<div class="tile tile-middle w-1-2">
+		<img src="../examples/images/spiral.svg" alt="swirly whirly" class="w-fill" />
+	</div>
+	<div class="tile tile-middle w-1-2 text-center">
+		TRIPPY<br />
+		JUNK
+	</div>
+</div>
+
+<h3 id="example-nav-bar">Example: Nav Bar</h3>
+
+<h2 id="source-ordering">Source Ordering</h2>
+
+<p><code>.shift-*-*-*</code></p>
+
+<h2 id="equal-height-columns">Equal Height Columns</h2>
+
+<h2 id="responsive">Responsive</h2>
+
+<p>Almost all classes in GhettoBox can be selectively applied depending on the screen size.</p>
+
+<p>In <code>variables.styl</code>:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>    screen-sizes = {
+        <span style="color:#606">sm</span>: <span style="color:#00D">768</span>px,
+        <span style="color:#606">md</span>: <span style="color:#00D">992</span>px,
+        <span style="color:#606">lg</span>: <span style="color:#00D">1200</span>px,
+        <span style="color:#606">xl</span>: <span style="color:#00D">1400</span>px
+    }
+</pre></div>
+</div>
+</div>
+
+<p>We can control when the class is applied by prefixing the name of the screen size onto the class name.</p>
+
+<p>For example, imagine we have two columns.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile w-1-2 pad-md</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        1
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tile w-1-2 pad-md</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        2
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>Let’s say we only wanted them to act as columns (tiles) when the screen is of at least a medium size (<code>992px</code>).</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tiles</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">md-tile md-w-1-2 pad-md</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        1
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">md-tile md-w-1-2 pad-md</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+        2
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>Note that these selective class-names are applied in a mobile-first fashion. This means that a class will apply to the specified screen size <em>as well as</em> all larger screen-sizes.</p>
+
+<p>You can override a component provided</p>
+
+<p><code>.tile</code>,<code>.stack</code>,<code>.table</code></p>
+
+<p><code>.pad-*</code></p>
+
+<h2 id="naming-scheme">Naming Scheme</h2>
+
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://powerfulwizard.net/ghetto-box-live-site/js/generate-sub-nav.js"></script>
+		<script type="text/javascript" src="http://powerfulwizard.net/ghetto-box-live-site/js/sticky-sidebar.js"></script>
+	</body>
+</html>

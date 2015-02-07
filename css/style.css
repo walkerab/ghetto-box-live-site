@@ -1,0 +1,192 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
+
+html,
+.tiles > * {
+	font-family: 'Cabin Sketch',sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+h1,h2,h3,h4,h5,h6 {
+	font-variant: small-caps;
+}
+
+h1:first-letter,
+h2:first-letter,
+h3:first-letter,
+h4:first-letter,
+h5:first-letter,
+h6:first-letter {
+	vertical-align: sub;
+}
+
+.cs-0 {
+	background-color: rgb(247, 240, 240);
+	color: #333;
+}
+
+/* Red on Yellow */
+.cs-1 {
+	background-color: #ffcb41;
+	/* Red from logo #ce615f darkened */
+	color: #69312F;
+}
+
+/* White on Blue */
+.cs-2 {
+	background-color: rgb(0, 113, 128);
+	color: white;
+}
+
+.hover-arrow {
+	position: relative;
+}
+
+.hover-arrow:focus:after,
+.hover-arrow:hover:after {
+	display: block;
+	position: absolute;
+	content: '<';
+	top: 50%;
+	transform: translate(0,-50%);
+	right: 1em;
+	font-size: 32px;
+	/*background-color: rgba(255,100,255,0.2);*/
+}
+
+.textured {
+	position: relative;
+}
+	.textured:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/halftone/halftone-transparent.png);
+		pointer-events: none;
+		z-index: 100;
+	}
+
+.readable {
+	max-width: 34em;
+}
+
+.angle-bottom-right {
+	position: relative;
+}
+
+	.angle-bottom-right:before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-color: transparent rgb(247, 240, 240) transparent transparent;
+		border-width: 20px 20px 0 0;
+		border-style: solid;
+	}
+
+.rnd-xs {
+	border-radius: 2px;
+}
+
+dt {
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+}
+
+	dt:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -90%;
+		width: 100%;
+		height: 100%;
+		border-width: 1px 0 0 0;
+		border-radius: 0 1000px/100px 100px 0;
+		border-style: solid;
+		/*opacity: 0.6;*/
+		transform: skewY(-5deg);
+	}
+
+dd {
+	padding-left: 26px;
+}
+
+@-webkit-keyframes boomboomboom {
+	0% {
+		transform: scaleX(1.005) scaleY(1.005);
+	}
+	100% {
+		transform: scaleX(1.0) scaleY(1.0);
+	}
+}
+
+.boomboomboom-animation {
+	-webkit-animation-name: boomboomboom;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-duration: .6s; /* 60/.6 = 100 BPM */
+	-webkit-animation-iteration-count: infinite;
+}
+
+.fixed-nav-wrapper {
+	padding-top: 52px;
+}
+
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.js-sticky-sidebar {
+	position: fixed;
+	top: 52px;
+	left: 0;
+}
+
+h2:before {
+	content: '';
+	display: block;
+	height: 64px;
+	margin-top: -64px;
+}
+
+h2:target {
+	-webkit-animation-name: wiggle;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wiggle {
+	0% {
+		transform: translate(0, 0);
+	}
+	12.5% {
+		transform: translate(20px, 0);
+	}
+	37.5% {
+		transform: translate(-20px, 0);
+	}
+	62.5% {
+		transform: translate(20px, 0);
+	}
+	87.5% {
+		transform: translate(-20px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
